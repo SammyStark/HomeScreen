@@ -48,44 +48,54 @@ class _HomeScreenState extends State<HomeScreen> {
                         height: 42,
                         width: 42,
                         decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(17)),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(17),
+                        ),
                       )
                     ],
                   ),
                 ],
               ),
-              
-               Padding(
-                    padding: const EdgeInsets.only(left: 20, top: 40.0),
-                    child: 
-              Column(crossAxisAlignment: CrossAxisAlignment.start,
-          
-              children:[
-              Text(
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 17, vertical: 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
                           'Stay Home',
                           style: TextStyle(
                               color: Colors.white,
-                              fontSize: 24.0,
+                              fontSize: 30,
                               fontWeight: FontWeight.w600),
                         ),
-                        SizedBox(height: 10,),
-                          Text(
-                          'Stay Home',
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          'Stay Safe',
                           style: TextStyle(
                               color: Colors.white,
-                              fontSize: 24.0,
+                              fontSize: 30,
                               fontWeight: FontWeight.w600),
-                        ),]),),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
               Wrap(
-                spacing: 20,
-                runSpacing: 20,
+                spacing: 12,
+                runSpacing: 15,
                 children: <Widget>[
                   Card(
                     text: 'Hospital',
                     isDone: true,
                     press: () {},
-                    iicon: Icon(Icons.arrow_right,
+                    iicon: Icon(
+                      Icons.arrow_right,
                       //Icons.medical_services,
                       color: Colors.white,
                       size: 30,
@@ -94,7 +104,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   Card(
                     text: 'Medicine',
                     press: () {},
-                    iicon: Icon(Icons.arrow_right,
+                    iicon: Icon(
+                      Icons.arrow_right,
                       //Icons.medical_services,
                       color: Colors.red,
                       size: 30,
@@ -104,7 +115,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     text: 'Consultancy',
                     press: () {},
                     iicon: Icon(
-                       Icons.arrow_right,
+                      Icons.arrow_right,
                       //Icons.medical_services,
                       size: 30,
                       color: Colors.green,
@@ -121,24 +132,30 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
-              SizedBox(height: 30),
-               
-                   Stack(
+              SizedBox(height: 10),
+              Stack(
                 children: <Widget>[
                   Container(
                     margin: EdgeInsets.all(20),
-                    height: 150.0,
-                    width:350,
+                    height: 100.0,
+                    width: 350,
+                    child: Opacity(
+                      opacity: 0.5,
+                    ),
+                    // image: DecorationImage(
+                    //   image: AssetImage("assets/24740.jpg"),
+                    //   fit: BoxFit.cover,
+                    // ),
+
                     decoration: BoxDecoration(
-                        shape: BoxShape.rectangle,
-                        color: Color(0xFF003D64),
-                        borderRadius: BorderRadius.circular(20.0),
-                       image: DecorationImage(
-            image: AssetImage("assets/24740.jpg"),
-            fit: BoxFit.cover,
-          ),
-                  ),),
-                 /* Container(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.white,
+                      image: DecorationImage(
+                          image: AssetImage('assets/24740.jpg'),
+                          fit: BoxFit.cover),
+                    ),
+                  ),
+                  /* Container(
                     alignment: FractionalOffset.centerRight,
                     child: Image(
                       image: AssetImage(
@@ -149,69 +166,68 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),*/
                   Padding(
-                    padding: const EdgeInsets.only(left: 50.0, top: 50.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Row(
-                          children:[
-                        Text(
-                          'Live Update',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 24.0,
-                              fontWeight: FontWeight.w600),
+                    padding: const EdgeInsets.only(left: 45.0, top: 30.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(top: 12),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Live Update',
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 24.0,
+                                    fontWeight: FontWeight.w600),
+                              ),
+                              SizedBox(
+                                height: 6.0,
+                              ),
+                              Text(
+                                'About Corona Virus',
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.w600),
+                              ),
+                            ],
+                          ),
                         ),
-                          Container(
-                        margin: EdgeInsets.only(left:110),
+                        Container(
+                          margin: EdgeInsets.only(left: 70, top: 10),
                           height: 40.0,
                           width: 50.0,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(30),
+                            borderRadius: BorderRadius.circular(12),
                             color: Color.fromRGBO(13, 52, 96, 1),
                           ),
                           child: Center(
-                           
-                                
-                                    child: Icon(
-                                      Icons.arrow_forward,
-                                      color: Colors.white,
-                                    ),
-                                   
-                                  ),
-                                
-                              
-                            
+                            child: Icon(
+                              Icons.arrow_forward,
+                              color: Colors.white,
+                            ),
                           ),
-                        ]),
-                        SizedBox(
-                          height: 10.0,
                         ),
-                        Text(
-                          'About Corona Virus',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 20.0,
-                              fontWeight: FontWeight.w600),
-                        ),
-                        SizedBox(
-                          height: 20.0,
-                        ),
-                         
-                      
                       ],
                     ),
+
+                    // SizedBox(
+                    //   height: 20.0,
+                    // ),
                   ),
                 ],
               ),
               Stack(
                 children: <Widget>[
-                  Container(margin: EdgeInsets.all(20),
+                  Container(
+                    margin: EdgeInsets.all(20),
                     width: 350,
                     height: 200.0,
                     decoration: BoxDecoration(
                         shape: BoxShape.rectangle,
-                        color:  Color.fromRGBO(59, 88, 124, 1),
+                        color: Color.fromRGBO(59, 88, 124, 1),
                         borderRadius: BorderRadius.circular(20.0),
                         boxShadow: <BoxShadow>[
                           BoxShadow(
@@ -221,7 +237,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ]),
                   ),
                   Container(
-                    margin: EdgeInsets.only(left:200, top:40),
+                    margin: EdgeInsets.only(left: 200, top: 40),
                     child: Image(
                       image: AssetImage(
                         'assets/62825.jpg',
@@ -260,7 +276,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           width: 150.0,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
-                            color:  Colors.white38,
+                            color: Colors.white38,
                           ),
                           child: Center(
                             child: RichText(
@@ -303,7 +319,7 @@ class Card extends StatelessWidget {
   const Card({
     this.text,
     this.isDone = false,
-   this.press,
+    this.press,
     this.iicon,
   });
 
@@ -311,9 +327,9 @@ class Card extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraint) {
       return ClipRRect(
-        borderRadius: BorderRadius.circular(13),
+        borderRadius: BorderRadius.circular(18),
         child: Container(
-          margin: EdgeInsets.all(5),
+          //margin: EdgeInsets.all(5),
           height: 50,
           width: 170,
           decoration: BoxDecoration(
